@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[System.Serializable]
 public class Item : MonoBehaviour {
     [SerializeField] string itemName;
     [SerializeField] string description;
 
     [SerializeField] Icon icon;
+    [SerializeField] ItemType itemType;
 
     //tooltip replacement that compares its stats what you have equipped.
 
@@ -26,5 +26,10 @@ public class Item : MonoBehaviour {
     public Icon Thumbnail {
         get { return icon; }
         set { icon = value; }
+    }
+
+    public ItemType TypeOfItem
+    {
+        get { return itemType; }
     }
 }
